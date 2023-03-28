@@ -15,7 +15,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Layout Demo'),
+        // back button
         leading: const Icon(Icons.arrow_circle_left),
+        // option icon with padding right only
         actions: const <Widget>[
           Icon(Icons.more_vert),
           Padding(padding: EdgeInsets.only(right: 10))
@@ -24,12 +26,16 @@ class HomePage extends StatelessWidget {
       body: Column(
         children: const [
           // IMAGE
+          // class yang berisi gambar
           ImageContainer(),
           // TITLE
+          // class yang berisi nama wisata
           TitleLayout(),
           // BUTTON
+          // class yang berisi tombol
           Button(),
           // TEXT DESCRIPTION
+          // class yang berisi deskripsi wisata
           Desc()
         ],
       ),

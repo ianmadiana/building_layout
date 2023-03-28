@@ -7,6 +7,7 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // column icon dan text dibungkus oleh row
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
@@ -36,15 +37,21 @@ class Button extends StatelessWidget {
         // button SHARE
         Column(
           children: [
+            // icon yg bisa diklik
             IconButton(
+              // icon ketika diklik akan menampilkan bottom sheet
               onPressed: () {
+                // widget bottom sheet
                 showModalBottomSheet(
+                  // border radius hanya di bagian atas
                   shape: const RoundedRectangleBorder(
                       borderRadius:
                           BorderRadius.vertical(top: Radius.circular(10))),
                   context: context,
+                  // layout bottom sheet dibungkus oleh widget sizedbox
                   builder: (context) => SizedBox(
                     height: 200,
+                    // item di dalam bottom sheet berupa ListTile dibungkus oleh ListView agar bisa di-scroll
                     child: ListView(
                       children: const [
                         ListTile(

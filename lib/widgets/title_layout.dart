@@ -9,9 +9,11 @@ class TitleLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(32),
+      // title (text dan icon) disusun dengan row dari kiri ke kanan
       child: Row(
         children: [
           Expanded(
+            // text disusun oleh column dari atas ke bawah
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -20,6 +22,7 @@ class TitleLayout extends StatelessWidget {
                   child: const Text(
                     'Oeschinen Lake Campground',
                     style: TextStyle(
+                      // ketebalan font
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -27,6 +30,7 @@ class TitleLayout extends StatelessWidget {
                 Text(
                   'Kandersteg, Switzerland',
                   style: TextStyle(
+                    // warna font
                     color: Colors.grey[500],
                   ),
                 )

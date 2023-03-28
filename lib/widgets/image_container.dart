@@ -7,12 +7,14 @@ class ImageContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // gambar di dalam gridview dibungkus oleh widget expanded
     return Expanded(
-      child: GridView.count(
+      // menampilkan gambar grid 3 kolom
+      child: GridView(
         padding: const EdgeInsets.all(5),
-        crossAxisSpacing: 5,
-        mainAxisSpacing: 5,
-        crossAxisCount: 3,
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3, crossAxisSpacing: 5, mainAxisSpacing: 5),
+        // generate list gambar sebanyak 6 buah memakai iterasi index
         children: List.generate(
           6,
           (index) => Image.asset(
