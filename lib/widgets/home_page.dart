@@ -16,6 +16,10 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter Layout Demo'),
         leading: const Icon(Icons.arrow_circle_left),
+        actions: const <Widget>[
+          Icon(Icons.more_vert),
+          Padding(padding: EdgeInsets.only(right: 10))
+        ],
       ),
       body: Column(
         children: const [
